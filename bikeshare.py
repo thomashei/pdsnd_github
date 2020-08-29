@@ -190,11 +190,11 @@ def user_stats(df):
       
     # display count of birth yaer with 10 years as a interval
     if 'Birth Year' in df:
-        bins = np.arange(1890, 2021, 10)
-        labels = ['1890 - 1899', '1900 - 1909', '1910 - 1919', '1920 - 1929', '1930 - 1939', 
+        y_bins = np.arange(1890, 2021, 10)
+        y_labels = ['1890 - 1899', '1900 - 1909', '1910 - 1919', '1920 - 1929', '1930 - 1939', 
                   '1940 - 1949', '1950 - 1959', '1960 - 1969', '1970 - 1979', '1980 - 1989', 
                   '1990 - 1999', '2000 - 2009', '2010 - 2019']
-        catagory_year = pd.cut(df['Birth Year'], bins=bins, labels=labels) 
+        catagory_year = pd.cut(df['Birth Year'], bins=y_bins, labels=y_labels) 
         count_range = df.groupby(catagory_year).size()
         print("Users'birth year count in ranges:\n", count_range, 'Total:', count_range.sum())
     else:
