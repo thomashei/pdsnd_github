@@ -190,11 +190,11 @@ def user_stats(df):
       
     # display count of birth yaer with 10 years as a interval
     if 'Birth Year' in df:
-        bins = np.arange(1890, 2021, 10)
-        labels = ['1890 - 1899', '1900 - 1909', '1910 - 1919', '1920 - 1929', '1930 - 1939', 
+        y_bins = np.arange(1890, 2021, 10)
+        y_labels = ['1890 - 1899', '1900 - 1909', '1910 - 1919', '1920 - 1929', '1930 - 1939', 
                   '1940 - 1949', '1950 - 1959', '1960 - 1969', '1970 - 1979', '1980 - 1989', 
                   '1990 - 1999', '2000 - 2009', '2010 - 2019']
-        catagory_year = pd.cut(df['Birth Year'], bins=bins, labels=labels) 
+        catagory_year = pd.cut(df['Birth Year'], bins=y_bins, labels=y_labels) 
         count_range = df.groupby(catagory_year).size()
         print("Users'birth year count in ranges:\n", count_range, 'Total:', count_range.sum())
     else:
@@ -215,23 +215,23 @@ def user_stats(df):
 
 def raw(df):
     # Ask if users want to see raw data. If yes, display 5 sets of data
-    detail = input('\nWould you like to see the raw data? Enter yes or no.\n')
+    detail = input('\nWould you like to see the raw data? Please enter yes or no.\n')
     if detail.lower() == 'yes':
         raw_df = df.filter(['Gender', 'User Type', 'Birth Year', 'Rent ID', 'Start Station', 'Start Time', 'End Station', 'End Time', 'Trip Duration'], axis=1)
         raw_dict = raw_df.to_dict(orient='index')
-        for i in sorted(raw_dict)[0:5]:
+        for i in sorted(raw_dict)[0:6]:
             pprint.pprint(raw_dict[i])
         
         # Ask if users want to see more raw data. Keep display 5 sets of data if answer yes
-        start_num = 5
+        start_num = 6
         while True:
             c = input('Would you like to see more data? Enter yes or no. \n')
             if c == 'no':
                 break
             elif c == 'yes': 
-                for i in sorted(raw_dict)[start_num:start_num+5]:
+                for i in sorted(raw_dict)[start_num:start_num+6]:
                     pprint.pprint(raw_dict[i])
-                start_num += 5
+                start_num += 6
                 continue
             else:
                 continue
