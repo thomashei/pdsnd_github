@@ -25,7 +25,7 @@ def data_filters():
         if city.title() in ['Chicago', 'New York City', 'Washington']:
             break
         else:
-            print("\nYou are only able to choose from 'Chicago', 'New York City' or 'Washington'!")
+            print("\nYou are only able to choose between 'Chicago', 'New York City' and 'Washington'!")
     
     # Users are asked if they want to filter data by month and day of week
     while True:
@@ -97,7 +97,7 @@ def time_stats(df):
     b = df['Day of Week'].values
     t = (b[0] == b).all()
     if t == True:
-        print('The most common day of week: {} (No doubt because you chose {}!) Count: {}'.format(popular_day, popular_day, popular_day_count),'\n')
+        print('The most common day of week: {} (Certainly! Because you chose {}!) Count: {}'.format(popular_day, popular_day, popular_day_count),'\n')
     elif t == False:
         print('The most common day of week: {}  Count: {}'.format(popular_day, popular_day_count),'\n')
     

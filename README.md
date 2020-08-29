@@ -1,15 +1,23 @@
 ### Date created
-Include the date you created this project and README file.
+15/08/2020
 
 ### Project Title
-Replace the Project Title
+bikeshare.py
 
 ### Description
-Describe what your project is about and what it does
+<bikeshare> is a tool that allows users to access the rent data of bike sharing compant Divvy.
 
-### Files used
-Include the files used
+This tool provides important statistical information which are computed from Divvy's database 
+for three major cities in the United States—Chicago, New York City, and Washington
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+Thanks to the following pages to help me in solving tasks in the project:
+
+https://stackoverflow.com/
+https://www.geeksforgeeks.org/
+https://www.kite.com/python
+https://www.twblogs.net/c/5b7abdbf2b7177392c96b93c/
+https://www.w3schools.com/python/
+
+These sites bisically solve all the difficulties. Awesome! 
 
