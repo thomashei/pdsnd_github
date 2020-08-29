@@ -17,6 +17,7 @@ https://stackoverflow.com/
 https://www.geeksforgeeks.org/
 https://www.kite.com/python
 https://www.twblogs.net/c/5b7abdbf2b7177392c96b93c/
+https://www.w3schools.com/python/
 
 These sites bisically solve all the difficulties. Awesome! 
 
