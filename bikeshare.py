@@ -25,7 +25,7 @@ def data_filters():
         if city.title() in ['Chicago', 'New York City', 'Washington']:
             break
         else:
-            print("\nYou are only able to choose from 'Chicago', 'New York City' or 'Washington'!")
+            print("\nYou are only able to choose between 'Chicago', 'New York City' and 'Washington'!")
     
     # Users are asked if they want to filter data by month and day of week
     while True:
