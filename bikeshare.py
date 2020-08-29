@@ -219,19 +219,19 @@ def raw(df):
     if detail.lower() == 'yes':
         raw_df = df.filter(['Gender', 'User Type', 'Birth Year', 'Rent ID', 'Start Station', 'Start Time', 'End Station', 'End Time', 'Trip Duration'], axis=1)
         raw_dict = raw_df.to_dict(orient='index')
-        for i in sorted(raw_dict)[0:5]:
+        for i in sorted(raw_dict)[0:6]:
             pprint.pprint(raw_dict[i])
         
         # Ask if users want to see more raw data. Keep display 5 sets of data if answer yes
-        start_num = 5
+        start_num = 6
         while True:
             c = input('Would you like to see more data? Enter yes or no. \n')
             if c == 'no':
                 break
             elif c == 'yes': 
-                for i in sorted(raw_dict)[start_num:start_num+5]:
+                for i in sorted(raw_dict)[start_num:start_num+6]:
                     pprint.pprint(raw_dict[i])
-                start_num += 5
+                start_num += 6
                 continue
             else:
                 continue
