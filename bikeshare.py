@@ -97,7 +97,7 @@ def time_stats(df):
     b = df['Day of Week'].values
     t = (b[0] == b).all()
     if t == True:
-        print('The most common day of week: {} (No doubt because you chose {}!) Count: {}'.format(popular_day, popular_day, popular_day_count),'\n')
+        print('The most common day of week: {} (Certainly! Because you chose {}!) Count: {}'.format(popular_day, popular_day, popular_day_count),'\n')
     elif t == False:
         print('The most common day of week: {}  Count: {}'.format(popular_day, popular_day_count),'\n')
     
