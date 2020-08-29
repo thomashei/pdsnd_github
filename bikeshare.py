@@ -215,7 +215,7 @@ def user_stats(df):
 
 def raw(df):
     # Ask if users want to see raw data. If yes, display 5 sets of data
-    detail = input('\nWould you like to see the raw data? Enter yes or no.\n')
+    detail = input('\nWould you like to see the raw data? Please enter yes or no.\n')
     if detail.lower() == 'yes':
         raw_df = df.filter(['Gender', 'User Type', 'Birth Year', 'Rent ID', 'Start Station', 'Start Time', 'End Station', 'End Time', 'Trip Duration'], axis=1)
         raw_dict = raw_df.to_dict(orient='index')
